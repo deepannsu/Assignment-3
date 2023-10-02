@@ -48,6 +48,16 @@ function getTeamDataWithAjax() {
     success: function(data) {
       // Clear the "Loading..." message
       $("#team").empty();
+    }
+
+      // Loop through the array of team members
+      $.each(data.team, function(index, member) {
+        // Create HTML elements for name, position, and bio
+        var nameElement = $("<h2>").text(member.name);
+        var positionElement = $("<h5>").text(member.position);
+        var bioElement = $("<p>").text(member.bio);
+
+      }
 
 
 
