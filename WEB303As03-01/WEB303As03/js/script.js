@@ -56,6 +56,11 @@ function getTeamDataWithAjax() {
         var nameElement = $("<h2>").text(member.name);
         var positionElement = $("<h5>").text(member.position);
         var bioElement = $("<p>").text(member.bio);
+        // Append the elements to the #team div
+        $("#team").append(nameElement, positionElement, bioElement);
+      });
+    },
+    error: function(jqXHR, textStatus, errorThrown) {
 
       }
 
