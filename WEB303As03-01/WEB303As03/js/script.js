@@ -64,7 +64,7 @@ function getTeamDataWithAjax() {
       // Display an error message in the #team div
       $("#team").text("Error: Could not retrieve content.");
       console.error("Error loading team data: " + textStatus, errorThrown);
-    };
+    }
   });
 }
     
