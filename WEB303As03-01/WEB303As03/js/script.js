@@ -36,5 +36,19 @@ function getTeamDataWithAjax() {
     }
   });
 }
+// Method for $.ajax request
+function getTeamDataWithAjax() {
+  // Display "Loading..." message in the #team div
+  $("#team").text("Loading...");
+
+  $.ajax({
+    url: "team.json",
+    type: "GET",
+    dataType: "json",
+    success: function(data) {
+      // Clear the "Loading..." message
+      $("#team").empty();
+
+
 
   
